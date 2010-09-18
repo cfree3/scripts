@@ -37,7 +37,7 @@ echo -n "Setting preferences..."
     fix_pref browser.rights.3.shown                             true;
     fix_pref browser.safebrowsing.enabled                       false;
     fix_pref browser.safebrowsing.malware.enabled               false;
-    fix_pref browser.startup.homepage                           \"file:///home/cfree3/start/index.html\";
+    fix_pref browser.startup.homepage                           \"file://${HOME}/start/index.html\";
     fix_pref browser.tabs.warnOnClose                           false;
     fix_pref dom.disable_window_move_resize                     true;
     fix_pref general.useragent.extra.firefox                    \"Firefox/${FF_VERSION}\";

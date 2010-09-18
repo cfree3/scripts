@@ -19,7 +19,7 @@ class SessionDialog:
 
     # Clean -> Run the clean script.
     def logout_clean(self, widget):
-        os.system("/home/cfree3/scripts/clean/metaclean.sh")
+        os.system(os.environ['HOME'] + "/scripts/clean/metaclean.sh")
 
     # Logout -> Exit Openbox.
     def logout(self, widget):
