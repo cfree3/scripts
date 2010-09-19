@@ -188,3 +188,6 @@ rm -rf $HOME/.gnome2
 # Remove GConf daemon files.
 rm -rf $HOME/.gconfd
 
+# Remove Vim netrw history.
+rm -f $HOME/.vim/.netrwhist
+
