@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # sessionDialog.py | Curtis Free (http://curtisfree.com)
 # This script displays a dialog that allows the user to clean (run a
 # cleanup script and exit Openbox), log out (exit Openbox), reboot the
