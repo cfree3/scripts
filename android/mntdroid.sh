@@ -25,5 +25,5 @@ fi
 mkdir -p /media/${LABEL}
 
 # Do the mount.
-mount -t ${TYPE}  -o noauto,rw,nosuid,nodev,nouser,uid=1000,gid=1000,umask=0007 ${DEVICE} /media/${LABEL}
+mount -t ${TYPE} -o noauto,rw,nosuid,nodev,nouser,uid=1000,gid=1000,umask=0007 ${DEVICE} /media/${LABEL}
 
