@@ -1,6 +1,7 @@
 #!/bin/bash
 # toplog.sh | Curtis Free (http://curtisfree.com)
-# Script to record `top` output on sequential runs.
+# Script to record `top` output on sequential runs; adds ability to specify
+# maximum number of iterations, unlike `watch`.
 
 if [[ $# -ne 2 ]]; then
     echo "usage: $0 <num_iterations> <delay>"
