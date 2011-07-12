@@ -10,16 +10,15 @@
 # http://ubuntuforums.org/showthread.php?t=138195
 # http://my.opera.com/lounge/forums/topic.dml?id=83440
 
-# Settings.
-DEVICE=/dev/sdb1
-TYPE='vfat'
-
-# Get the user-specified label (might or might not be the actual drive label).
-if [ -z "${1}" ]; then
-    echo "Error! Must specify label."
+# Get the device, type, and user-specified label (might or might not be the actual drive label).
+if [ -z "${1}" ] || [ -z "${2}" ] || [ -z "${3}" ]; then
+    echo "Error! Must specify device, FS type, and label."
+    echo "usage: $0 <device> <type> <label>"
     exit 2
 fi
-LABEL="${1}"
+DEVICE="${1}"
+TYPE="${2}"
+LABEL="${3}"
 
 # Must be root.
 if [ `id -u` -ne 0 ]; then
