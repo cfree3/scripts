@@ -3,8 +3,6 @@
 # Simple script that provides a concise string of information about the current Git
 # repository; this is intended for inclusion in a shell prompt.
 
-# NOTE: This script is 
-
 # Output:(<branch>+@!)
 # * <branch> is the branch name
 # * + indicates that there are staged changes
@@ -12,7 +10,7 @@
 # * ! indicates that there are untracked files
 # Nothing will be returned (not even the parens) if not in a Git repo.
 
-# Some references consulted when writing this script:
+# Some references that were consulted when writing this script:
 # * http://eseth.org/2010/git-in-zsh/
 # * http://www.zsh.org/mla/users/2006/msg00922.html
 
