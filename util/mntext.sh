@@ -9,6 +9,7 @@
 # http://serverfault.com/questions/43634/how-to-mount-external-vfat-drive-as-user
 # http://ubuntuforums.org/showthread.php?t=138195
 # http://my.opera.com/lounge/forums/topic.dml?id=83440
+# http://forums.fedoraforum.org/showthread.php?t=264367
 
 # Get the device, type, and user-specified label (might or might not be the actual drive label).
 if [ -z "${1}" ] || [ -z "${2}" ] || [ -z "${3}" ]; then
@@ -35,6 +36,12 @@ fi
 # Ensure that the mount dir exists.
 mkdir -p /media/${LABEL}
 
+# Build options.
+OPTIONS=noauto,rw,nosuid,nodev,nouser
+if [ ${TYPE} = "vfat" ]; then
+    OPTIONS=${OPTIONS},uid=1000,gid=1000,umask=0007
+fi
+
 # Do the mount.
-mount -t ${TYPE}  -o noauto,rw,nosuid,nodev,nouser,uid=1000,gid=1000,umask=0007 ${DEVICE} /media/${LABEL}
+mount -t ${TYPE}  -o ${OPTIONS} ${DEVICE} /media/${LABEL}
 
